@@ -1,46 +1,38 @@
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// ===== TYPING INTRO =====
-// Edit these lines to change what the terminal types.
-var lines = [
-  { cmd: "whoami",         out: "Jermaine Nico T. Daño" },
-  { cmd: "cat education",  out: "Information Technology graduate" },
-  { cmd: "ls skills/",     out: "HTML  CSS  JavaScript  C++" },
-  { cmd: "echo $STATUS",   out: "Learning, building, open to work." }
-];
+// ===== THEME TOGGLE (dark / light) =====
+var root = document.documentElement;
+var themeBtn = document.getElementById("theme");
+function setTheme(t){
+  root.setAttribute("data-theme", t);
+  themeBtn.textContent = t === "dark" ? "\u263E" : "\u2600";
+  try { localStorage.setItem("theme", t); } catch (e) {}
+}
+var saved = "dark";
+try { saved = localStorage.getItem("theme") || "dark"; } catch (e) {}
+setTheme(saved);
+themeBtn.addEventListener("click", function(){
+  setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+});
 
-var el = document.getElementById("typed");
+// ===== TYPING ROLE =====
+// Edit this list to change the words that are typed after "a".
+var roles = ["IT Graduate", "IT Support", "Web Developer"];
+var roleEl = document.getElementById("role");
 var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-function esc(s){ return s.replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
-function row(l){
-  return '<div><span class="p">$</span> ' + esc(l.cmd) + '</div><div class="out">' + esc(l.out) + '</div>';
-}
-
 if (reduce) {
-  el.innerHTML = lines.map(row).join("");
+  roleEl.textContent = roles[0];
 } else {
-  var done = "", i = 0;
-  (function nextLine(){
-    if (i >= lines.length) return;
-    var l = lines[i], c = 0;
-    (function typeCmd(){
-      el.innerHTML = done + '<div><span class="p">$</span> ' + esc(l.cmd.slice(0, c)) + '</div>';
-      if (c++ < l.cmd.length) { setTimeout(typeCmd, 60); return; }
-      setTimeout(function(){
-        done += row(l);
-        el.innerHTML = done;
-        i++;
-        setTimeout(nextLine, 400);
-      }, 300);
-    })();
+  var r = 0, c = 0, deleting = false;
+  (function tick(){
+    var word = roles[r];
+    roleEl.textContent = word.slice(0, c);
+    var delay = deleting ? 45 : 90;
+    if (!deleting && c === word.length) { deleting = true; delay = 1400; }
+    else if (deleting && c === 0) { deleting = false; r = (r + 1) % roles.length; delay = 350; }
+    else { c += deleting ? -1 : 1; }
+    setTimeout(tick, delay);
   })();
 }
-
-// ===== RUN CODE BUTTON =====
-var runBtn = document.getElementById("run");
-var outBox = document.getElementById("out");
-runBtn.addEventListener("click", function () {
-  outBox.textContent = "> Hello! I'm Jermaine. Let's build something.";
-});

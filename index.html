@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,58 +7,48 @@
   <meta name="description" content="Portfolio of Jermaine Nico T. Daño, Information Technology graduate skilled in HTML, CSS, JavaScript and C++.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="nav">
+  <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top">~/<span>jermaine</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">about</a></li>
-        <li><a href="#skills">skills</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
+      <a class="brand" href="#top"><span class="logo">J</span>Jermaine</a>
+      <nav class="nav-right" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme" id="theme" type="button" aria-label="Switch light or dark theme">☾</button>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="top">
 
-    <!-- HERO: terminal intro (typing effect is in script.js) -->
+    <!-- HERO -->
     <section class="hero">
-      <div class="wrap">
-        <div class="hero-grid">
-        <div class="term">
-          <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-          <div class="term-body">
-            <div id="typed" aria-live="polite"></div>
-            <span class="cursor" aria-hidden="true"></span>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Hi, I'm</p>
+          <h1>Jermaine <span class="accent">Daño</span></h1>
+          <p class="role">a <span id="role"></span><span class="caret" aria-hidden="true"></span></p>
+          <p class="lead">Information Technology graduate turning ideas into clean, reliable and easy-to-use websites.</p>
+          <div class="cta">
+            <a class="btn primary" href="#projects">View my work</a>
+            <a class="btn" href="#contact">Get in touch</a>
           </div>
         </div>
-
-        <!-- CODE PANEL: edit the values below to change what it shows -->
-        <div class="code">
-          <div class="term-bar"><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><span class="file">developer.js</span></div>
-          <pre class="code-body" aria-label="Code that describes me"><code><span class="c">// who am I?</span>
-<span class="k">const</span> <span class="v">developer</span> = {
-  <span class="n">name</span>: <span class="s">"Jermaine Nico T. Daño"</span>,
-  <span class="n">role</span>: <span class="s">"IT Graduate"</span>,
-  <span class="n">skills</span>: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JavaScript"</span>, <span class="s">"C++"</span>],
-  <span class="n">openToWork</span>: <span class="k">true</span>,
-};</code></pre>
-          <div class="code-run">
-            <button class="btn" id="run" type="button">Run code</button>
-            <div class="code-out" id="out" aria-live="polite"></div>
+        <div class="photo">
+          <div class="blob">
+            <span class="initials" aria-hidden="true">JD</span>
+            <!-- TODO: put your photo in the same folder and name it photo.jpg (or photo.png) -->
+            <img src="photo.jpg" alt="Photo of Jermaine Nico T. Daño" onerror="this.style.display='none'">
           </div>
-        </div>
-        </div>
-
-        <div class="cta">
-          <a class="btn main" href="#projects">View projects</a>
-          <a class="btn" href="#contact">Contact me</a>
         </div>
       </div>
     </section>
@@ -66,16 +56,54 @@
     <!-- ABOUT -->
     <section id="about">
       <div class="wrap">
-        <h2>about</h2>
-        <p>Hi, I'm Jermaine Nico T. Daño, an Information Technology graduate who enjoys building websites and learning how software works.</p>
-        <!-- TODO: add 1-2 more sentences about your goals (job you want, what you are learning) -->
+        <h2>About me</h2>
+        <p>I'm Jermaine Nico T. Daño, an Information Technology graduate who enjoys building websites and learning how software works. I work with HTML, CSS, JavaScript and C++.</p>
+        <!-- TODO: add 1-2 sentences about your goals (the job you want, what you are learning now) -->
       </div>
     </section>
 
-    <!-- SKILLS (styled in Step 4) -->
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <h2>Projects</h2>
+        <!-- NOTE TO SELF: I have no projects yet. Replace these cards with real ones:
+             change the title, description, tags and the two links.
+             Idea: add the websites I am building (store site, invitation, etc.). -->
+        <div class="cards">
+          <article class="card">
+            <h3>Project one</h3>
+            <p>Coming soon. Add a one-line description of your first project here.</p>
+            <p class="tags">HTML · CSS · JavaScript</p>
+            <p class="card-links"><a href="#">Live demo</a><a href="#">Source code</a></p>
+          </article>
+          <article class="card">
+            <h3>Project two</h3>
+            <p>Coming soon. Add a one-line description of your second project here.</p>
+            <p class="tags">C++</p>
+            <p class="card-links"><a href="#">Live demo</a><a href="#">Source code</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+      <div class="wrap">
+        <h2>Certificates</h2>
+        <!-- NOTE TO SELF: add your real certificates (name, issuer, year). Delete this card if you have none yet. -->
+        <div class="cards">
+          <article class="card">
+            <h3>Certificate name</h3>
+            <p>Issuer · Year</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
     <section id="skills">
       <div class="wrap">
-        <h2>skills</h2>
+        <h2>Skills</h2>
         <ul class="skills">
           <li>HTML</li>
           <li>CSS</li>
@@ -85,59 +113,22 @@
       </div>
     </section>
 
-    <!-- PROJECTS (cards styled in Step 5) -->
-    <section id="projects">
-      <div class="wrap">
-        <h2>projects</h2>
-        <div class="projects">
-
-          <!-- NOTE TO SELF: I have no projects yet. Replace these cards with real ones.
-               For each project: change the title, description, tags and the two links.
-               Idea: put the websites you are building here (store site, invitation, etc.). -->
-
-          <article class="proj">
-            <h3>project-one</h3>
-            <p>Coming soon. Add a one-line description of your first project here.</p>
-            <div class="tags">HTML, CSS, JavaScript</div>
-            <div class="proj-links">
-              <a href="#">Live demo</a>
-              <a href="#">Source code</a>
-            </div>
-          </article>
-
-          <article class="proj">
-            <h3>project-two</h3>
-            <p>Coming soon. Add a one-line description of your second project here.</p>
-            <div class="tags">C++</div>
-            <div class="proj-links">
-              <a href="#">Live demo</a>
-              <a href="#">Source code</a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
     <!-- CONTACT -->
     <section id="contact">
       <div class="wrap">
-        <h2>contact</h2>
-        <p>Open to job opportunities and collaborations.</p>
-        <div class="links">
-          <!-- TODO: replace with your real email and GitHub username -->
+        <h2>Get in touch</h2>
+        <p>I'm open to job opportunities and collaborations.</p>
+        <!-- TODO: replace with your real email and GitHub username -->
+        <p class="contact-links">
           <a href="mailto:your-email@example.com">your-email@example.com</a>
-          <a href="https://github.com/your-username">github</a>
-        </div>
+          <a href="https://github.com/your-username">GitHub</a>
+        </p>
       </div>
     </section>
 
   </main>
 
-  <footer>
-    <div class="wrap">&copy; <span id="year">2026</span> Jermaine Nico T. Daño</div>
-  </footer>
-
+  <footer><div class="wrap">&copy; <span id="year">2026</span> Jermaine Nico T. Daño</div></footer>
   <script src="script.js"></script>
 </body>
 </html>
