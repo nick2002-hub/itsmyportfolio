@@ -48,9 +48,9 @@ h1{font:700 clamp(2.6rem,6vw,4.2rem)/1.1 var(--font)}
 .btn.primary:hover{transform:translateY(-2px)}
 
 .photo{position:relative;width:min(100%,400px);aspect-ratio:1;margin:0 auto}
-.blob{position:absolute;top:-4%;right:-10%;width:108%;height:90%;z-index:0;background:var(--blob);border-radius:50%;transform:rotate(-16deg);display:grid;place-items:center}
-.me{position:absolute;z-index:1;bottom:0;left:50%;transform:translateX(-50%);height:118%;width:auto;max-width:125%;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
-.initials{font-size:5rem;font-weight:700;color:var(--accent);opacity:.85;transform:rotate(16deg)}
+.blob{position:absolute;inset:0;z-index:0;background:var(--blob);border-radius:60% 51% 55% 50% / 50% 52% 50% 50%;display:grid;place-items:center}
+.me{position:absolute;z-index:1;bottom:0;left:50%;transform:translateX(-50%);height:118%;width:auto;max-width:125%;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 60%,transparent 100%)}
+.initials{font-size:5rem;font-weight:700;color:var(--accent);opacity:.85}
 
 /* ===== SECTIONS ===== */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
