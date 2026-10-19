@@ -1,0 +1,59 @@
+/* ===== THEME ===== */
+:root{
+  --bg:#0e1621; --panel:#142030; --line:#25364b;
+  --text:#d6e2f0; --muted:#8499b0;
+  --prompt:#ffb454; --link:#5ccfe6;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+/* ===== BASE ===== */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 1rem/1.7 var(--sans)}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--prompt);outline-offset:3px}
+.wrap{max-width:900px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0 1rem}
+h2{font:700 1.4rem var(--mono);margin-bottom:1.5rem}
+h2::before{content:"$ ";color:var(--prompt)}
+p{max-width:65ch}
+
+/* ===== NAV ===== */
+.nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(14,22,33,.92);backdrop-filter:blur(6px);z-index:5}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;height:56px;font-family:var(--mono);font-size:.9rem}
+.nav-links{display:flex;gap:1.25rem;list-style:none}
+.brand{color:var(--text);font-weight:700}
+.brand span{color:var(--prompt)}
+
+/* ===== HERO ===== */
+.hero{padding-top:3.5rem}
+.term{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.term-bar{display:flex;gap:.5rem;padding:.7rem 1rem;border-bottom:1px solid var(--line)}
+.term-bar i{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.term-body{padding:1.5rem;font:400 .95rem/1.8 var(--mono);min-height:260px}
+.p{color:var(--prompt)}
+.out{margin-bottom:.9rem}
+.cursor{display:inline-block;width:.6em;height:1.1em;background:var(--text);vertical-align:text-bottom;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.cta{display:flex;gap:.75rem;margin-top:1.5rem;flex-wrap:wrap}
+.btn{font:500 .9rem var(--mono);padding:.6rem 1rem;border:1px solid var(--line);border-radius:6px;color:var(--text)}
+.btn:hover{border-color:var(--link);text-decoration:none}
+.btn.main{background:var(--prompt);border-color:var(--prompt);color:#1a1205}
+
+/* ===== TEMPORARY STYLES (we will improve these in Steps 4 and 5) ===== */
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none}
+.skills li{font:400 .85rem var(--mono);border:1px solid var(--line);border-radius:5px;padding:.2rem .65rem;color:var(--muted)}
+.projects{display:grid;gap:1rem}
+.proj{border:1px solid var(--line);border-radius:8px;padding:1.25rem 1.4rem;background:var(--panel)}
+.proj h3{font:700 1rem var(--mono);color:var(--link);margin-bottom:.35rem}
+.proj p{color:var(--muted);font-size:.95rem}
+.tags{margin-top:.7rem;font:400 .8rem var(--mono);color:var(--prompt)}
+.proj-links{margin-top:.7rem;display:flex;gap:1rem;font:400 .85rem var(--mono)}
+.links{display:flex;gap:1.25rem;flex-wrap:wrap;font-family:var(--mono);margin-top:1rem}
+footer{margin-top:4rem;border-top:1px solid var(--line);padding:1.5rem 0;color:var(--muted);font:400 .8rem var(--mono)}
+
+/* ===== RESPONSIVE + ACCESSIBILITY ===== */
+@media (max-width:560px){.nav-links{gap:.8rem;font-size:.8rem}.term-body{padding:1rem;font-size:.85rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cursor{animation:none}}
