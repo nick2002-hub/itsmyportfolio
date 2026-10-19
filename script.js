@@ -37,3 +37,10 @@ if (reduce) {
     })();
   })();
 }
+
+// ===== RUN CODE BUTTON =====
+var runBtn = document.getElementById("run");
+var outBox = document.getElementById("out");
+runBtn.addEventListener("click", function () {
+  outBox.textContent = "> Hello! I'm Jermaine. Let's build something.";
+});

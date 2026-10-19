@@ -30,6 +30,7 @@
     <!-- HERO: terminal intro (typing effect is in script.js) -->
     <section class="hero">
       <div class="wrap">
+        <div class="hero-grid">
         <div class="term">
           <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i></div>
           <div class="term-body">
@@ -37,6 +38,24 @@
             <span class="cursor" aria-hidden="true"></span>
           </div>
         </div>
+
+        <!-- CODE PANEL: edit the values below to change what it shows -->
+        <div class="code">
+          <div class="term-bar"><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><span class="file">developer.js</span></div>
+          <pre class="code-body" aria-label="Code that describes me"><code><span class="c">// who am I?</span>
+<span class="k">const</span> <span class="v">developer</span> = {
+  <span class="n">name</span>: <span class="s">"Jermaine Nico T. Daño"</span>,
+  <span class="n">role</span>: <span class="s">"IT Graduate"</span>,
+  <span class="n">skills</span>: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JavaScript"</span>, <span class="s">"C++"</span>],
+  <span class="n">openToWork</span>: <span class="k">true</span>,
+};</code></pre>
+          <div class="code-run">
+            <button class="btn" id="run" type="button">Run code</button>
+            <div class="code-out" id="out" aria-live="polite"></div>
+          </div>
+        </div>
+        </div>
+
         <div class="cta">
           <a class="btn main" href="#projects">View projects</a>
           <a class="btn" href="#contact">Contact me</a>

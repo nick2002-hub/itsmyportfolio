@@ -42,6 +42,24 @@ p{max-width:65ch}
 .btn:hover{border-color:var(--link);text-decoration:none}
 .btn.main{background:var(--prompt);border-color:var(--prompt);color:#1a1205}
 
+/* ===== HERO: code panel ===== */
+.hero .wrap{max-width:1040px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:stretch}
+.code{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.code .term-bar{align-items:center}
+.file{margin-left:.5rem;font:400 .8rem var(--mono);color:var(--muted)}
+.code-body{padding:1.25rem 1.5rem;font:400 .88rem/1.8 var(--mono);overflow-x:auto;flex:1}
+.code-body .c{color:var(--muted)}
+.code-body .k{color:#c792ea}
+.code-body .v{color:var(--link)}
+.code-body .n{color:var(--text)}
+.code-body .s{color:#a5d6a7}
+.code-run{display:flex;align-items:center;gap:1rem;padding:.9rem 1.25rem;border-top:1px solid var(--line);flex-wrap:wrap}
+.code-run .btn{cursor:pointer;background:transparent;color:var(--prompt);border-color:var(--prompt)}
+.code-run .btn:hover{background:var(--prompt);color:#1a1205}
+.code-out{font:400 .85rem var(--mono);color:var(--muted)}
+@media (max-width:760px){.hero-grid{grid-template-columns:1fr}}
+
 /* ===== TEMPORARY STYLES (we will improve these in Steps 4 and 5) ===== */
 .skills{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none}
 .skills li{font:400 .85rem var(--mono);border:1px solid var(--line);border-radius:5px;padding:.2rem .65rem;color:var(--muted)}
