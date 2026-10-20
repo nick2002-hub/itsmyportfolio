@@ -1,134 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jermaine Nico T. Daño | IT Graduate & Web Developer</title>
-  <meta name="description" content="Portfolio of Jermaine Nico T. Daño, Information Technology graduate skilled in HTML, CSS, JavaScript and C++.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jermaine Nico T. Daño | IT Graduate & Web Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Jermaine Nico T. Daño, Information Technology graduate skilled in HTML, CSS, JavaScript and C++."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="#top"><span class="logo">J</span>Jermaine</a>
+        <nav class="nav-right" aria-label="Main">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button
+            class="theme"
+            id="theme"
+            type="button"
+            aria-label="Switch light or dark theme"
+          >
+            ☾
+          </button>
+        </nav>
+      </div>
+    </header>
 
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="#top"><span class="logo">J</span>Jermaine</a>
-      <nav class="nav-right" aria-label="Main">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="theme" id="theme" type="button" aria-label="Switch light or dark theme">☾</button>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">Hi, I'm</p>
-          <h1>Jermaine <span class="accent">Daño</span></h1>
-          <p class="role">a <span id="role"></span><span class="caret" aria-hidden="true"></span></p>
-          <p class="lead">Information Technology graduate turning ideas into clean, reliable and easy-to-use websites.</p>
-          <div class="cta">
-            <a class="btn primary" href="#projects">View my work</a>
-            <a class="btn" href="#contact">Get in touch</a>
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="eyebrow">Hi, I'm</p>
+            <h1>Jermaine <span class="accent">Daño</span></h1>
+            <p class="role">
+              a <span id="role"></span
+              ><span class="caret" aria-hidden="true"></span>
+            </p>
+            <p class="lead">
+              Information Technology graduate turning ideas into clean, reliable
+              and easy to use websites.
+            </p>
+            <div class="cta">
+              <a class="btn primary" href="#projects">View my work</a>
+              <a class="btn" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <div class="photo">
+            <!-- The blob is only the background shape -->
+            <div class="blob">
+              <span class="initials" aria-hidden="true">JD</span>
+            </div>
+            <!-- TODO: save your photo as photo.png in the same folder.
+               Use a PNG with the background removed so it sits in front of the blob. -->
+            <img
+              class="me"
+              src="image/photo.jpg"
+              alt="Photo of Jermaine Nico T. Daño"
+              onerror="this.style.display = 'none'"
+            />
           </div>
         </div>
-        <div class="photo">
-          <!-- The blob is only the background shape -->
-          <div class="blob"><span class="initials" aria-hidden="true">JD</span></div>
-          <!-- TODO: save your photo as photo.png in the same folder.
-               Use a PNG with the background removed so it sits in front of the blob. -->
-          <img class="me" src="image/photo.jpg" alt="Photo of Jermaine Nico T. Daño" onerror="this.style.display='none'">
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="wrap">
+          <h2>About me</h2>
+          <p>
+            I'm Jermaine Nico T. Daño, an Information Technology graduate who
+            enjoys building websites and learning how software works. I work
+            with HTML, CSS, JavaScript and C++.
+          </p>
+          <!-- TODO: add 1-2 sentences about your goals (the job you want, what you are learning now) -->
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="wrap">
-        <h2>About me</h2>
-        <p>I'm Jermaine Nico T. Daño, an Information Technology graduate who enjoys building websites and learning how software works. I work with HTML, CSS, JavaScript and C++.</p>
-        <!-- TODO: add 1-2 sentences about your goals (the job you want, what you are learning now) -->
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="wrap">
-        <h2>Projects</h2>
-        <!-- NOTE TO SELF: I have no projects yet. Replace these cards with real ones:
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="wrap">
+          <h2>Projects</h2>
+          <!-- NOTE TO SELF: I have no projects yet. Replace these cards with real ones:
              change the title, description, tags and the two links.
              Idea: add the websites I am building (store site, invitation, etc.). -->
-        <div class="cards">
-          <article class="card">
-            <h3>Project one</h3>
-            <p>Coming soon. Add a one-line description of your first project here.</p>
-            <p class="tags">HTML · CSS · JavaScript</p>
-            <p class="card-links"><a href="#">Live demo</a><a href="#">Source code</a></p>
-          </article>
-          <article class="card">
-            <h3>Project two</h3>
-            <p>Coming soon. Add a one-line description of your second project here.</p>
-            <p class="tags">C++</p>
-            <p class="card-links"><a href="#">Live demo</a><a href="#">Source code</a></p>
-          </article>
+          <div class="cards">
+            <article class="card">
+              <h3>Project one</h3>
+              <p>
+                Coming soon. Add a one-line description of your first project
+                here.
+              </p>
+              <p class="tags">HTML · CSS · JavaScript</p>
+              <p class="card-links">
+                <a href="#">Live demo</a><a href="#">Source code</a>
+              </p>
+            </article>
+            <article class="card">
+              <h3>Project two</h3>
+              <p>
+                Coming soon. Add a one-line description of your second project
+                here.
+              </p>
+              <p class="tags">C++</p>
+              <p class="card-links">
+                <a href="#">Live demo</a><a href="#">Source code</a>
+              </p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CERTIFICATES -->
-    <section id="certificates">
-      <div class="wrap">
-        <h2>Certificates</h2>
-        <!-- NOTE TO SELF: add your real certificates (name, issuer, year). Delete this card if you have none yet. -->
-        <div class="cards">
-          <article class="card">
-            <h3>Certificate name</h3>
-            <p>Issuer · Year</p>
-          </article>
+      <!-- CERTIFICATES -->
+      <section id="certificates">
+        <div class="wrap">
+          <h2>Certificates</h2>
+          <!-- NOTE TO SELF: add your real certificates (name, issuer, year). Delete this card if you have none yet. -->
+          <div class="cards">
+            <article class="card">
+              <h3>Certificate name</h3>
+              <p>Issuer · Year</p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="wrap">
+          <h2>Skills</h2>
+          <ul class="skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>C++</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="wrap">
+          <h2>Get in touch</h2>
+          <p>I'm open to job opportunities and collaborations.</p>
+          <!-- TODO: replace with your real email and GitHub username -->
+          <p class="contact-links">
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+            <a href="https://github.com/your-username">GitHub</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
       <div class="wrap">
-        <h2>Skills</h2>
-        <ul class="skills">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>C++</li>
-        </ul>
+        &copy; <span id="year">2026</span> Jermaine Nico T. Daño
       </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="wrap">
-        <h2>Get in touch</h2>
-        <p>I'm open to job opportunities and collaborations.</p>
-        <!-- TODO: replace with your real email and GitHub username -->
-        <p class="contact-links">
-          <a href="mailto:your-email@example.com">your-email@example.com</a>
-          <a href="https://github.com/your-username">GitHub</a>
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer><div class="wrap">&copy; <span id="year">2026</span> Jermaine Nico T. Daño</div></footer>
-  <script src="script.js"></script>
-</body>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
